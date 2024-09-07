@@ -1,4 +1,4 @@
-import earthIcon from "../../assets/icons/earth.svg";
+import earthIcon from "../../assets/icons/Earth.svg";
 const Logo = () => {
   return (
     <>
