@@ -9,10 +9,13 @@ const ContactUs = () => {
 
       <div className="grid sm:grid-rows-1 sm:grid-cols-2 gap-8">
         <iframe
-          className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.89592087332!2d72.8319697277345!3d19.14167056419224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1641716772852!5m2!1sen!2sin"
-          allowFullScreen=""
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58974.16940173616!2d88.3336382!3d22.50847545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1725905193634!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
           loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
 
         <form
