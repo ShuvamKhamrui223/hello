@@ -7,23 +7,18 @@ export const navMenu = [
   },
   {
     menuId: 2,
-    menuLabel: "why us",
-    path: "/why us",
+    menuLabel: "about us",
+    path: "/aboutus",
   },
   {
     menuId: 3,
-    menuLabel: "features",
-    path: "/features",
+    menuLabel: "pricing",
+    path: "/pricing",
   },
   {
     menuId: 4,
-    menuLabel: "platforms",
-    path: "/platforms",
-  },
-  {
-    menuId: 5,
-    menuLabel: "pricing",
-    path: "/pricing",
+    menuLabel: "contact",
+    path: "/contact",
   },
 ];
 

@@ -18,9 +18,9 @@ const Navbar = () => {
           {navMenu?.map((menuitem) => (
             <li key={menuitem.menuId}>
               <NavLink
-                href={menuitem.path}
-                className={`text-linkColor_primary capitalize font-normal ${
-                  location.pathname == menuitem.path && "font-bold"
+                to={menuitem.path}
+                className={`text-black_primary capitalize ${
+                  location.pathname == menuitem.path ? "font-bold bg-black_primary py-2 px-4 text-white":"font-normal"
                 } text-2xl`}
               >
                 {menuitem.menuLabel}
@@ -29,7 +29,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex gap-6 items-center">
+        {/* <div className="flex gap-6 items-center">
           <img
             className="cursor-pointer invert size-8 select-none"
             src={isLightTheme ? darkModeIcon : lightModeIcon}
@@ -42,7 +42,7 @@ const Navbar = () => {
             className={"hidden sm:block"}
             gradient={true}
           />
-        </div>
+        </div> */}
       </div>
 
       {/* optional rendering */}
@@ -57,8 +57,8 @@ const Navbar = () => {
 
       {/* mobile nav menu */}
       <aside
-        className={`absolute top-0 ${
-          isMenuOpen ? "right-0" : "-right-full"
+        className={`absolute top-0 right-0 ${
+          isMenuOpen ? "flex" : "hidden"
         } transition-all duration-200  bg-black/90 min-h-screen w-2/3 flex items-center justify-center gap-8 flex-col`}
       >
         <a
@@ -70,12 +70,12 @@ const Navbar = () => {
         <ul className="md:hidden flex flex-col gap-6 items-center">
           {navMenu?.map((menuitem) => (
             <li key={menuitem.menuId} className="select-none">
-              <a
-                href={menuitem.path}
+              <NavLink
+                to={menuitem.path}
                 className="text-white uppercase font-thin text-2xl"
               >
                 {menuitem.menuLabel}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

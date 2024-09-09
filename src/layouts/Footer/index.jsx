@@ -18,13 +18,13 @@ const Footer = () => {
           </div>
 
           <div className="col ">
-            <h3 className="text-2xl text-linkColor_primary capitalize mb-4">
+            <h3 className="text-2xl text-black_primary capitalize mb-4">
               {footerContent?.services?.label}
             </h3>
             <ul className="flex flex-col gap-4">
               {footerContent?.services?.items?.map((item) => (
                 <li className="" key={item.itemId}>
-                  <Link className="text-2xl text-linkColor_secondary capitalize">
+                  <Link className="text-2xl text-black_secondary capitalize">
                     {item.itemLabel}
                   </Link>
                 </li>
@@ -49,13 +49,13 @@ const Footer = () => {
           </div>
 
           <div className="col">
-            <h3 className="text-2xl text-linkColor_primary capitalize mb-2">
+            <h3 className="text-2xl text-black_primary capitalize mb-2">
               {footerContent?.help?.label}
             </h3>
             <ul className="flex flex-col gap-4">
               {footerContent?.help?.items?.map((item) => (
                 <li key={item.itemId}>
-                  <p className="text-2xl text-linkColor_secondary capitalize">
+                  <p className="text-2xl text-black_secondary capitalize">
                     {item.itemLabel}
                   </p>
                 </li>
@@ -66,10 +66,10 @@ const Footer = () => {
 
         <div className="row_2 w-full border-t-2 pt-8 flex items-center justify-between flex-col-reverse gap-y-6 sm:flex-row">
           <div className="col flex gap-2">
-            <Link className="text-2xl text-linkColor_secodary capitalize">
+            <Link className="text-2xl text-black_secodary capitalize">
               terms & conditions
             </Link>
-            <Link className="text-2xl text-linkColor_secodary capitalize">
+            <Link className="text-2xl text-black_secodary capitalize">
               privacy policies
             </Link>
           </div>
