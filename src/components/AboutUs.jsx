@@ -4,12 +4,9 @@ import { aboutContent } from "../constants/homepage";
 import aboutvideo from "../assets/about-vid.mp4";
 const AboutUs = () => {
   return (
-    <section
-      className="about min-h-[65vh] flex items-center"
-      id="about"
-    >
+    <section className="about min-h-[65vh] flex items-center" id="about">
       <div className="container flex gap-8 flex-col items-center">
-        <h1 className="heading text-[3rem] self-start text-black_primary pl-4 border-l-[1rem] border-black_secondary capitalize ">
+        <h1 className="heading text-[3rem] self-start text-black_primary dark:text-white pl-4 border-l-[1rem] border-black_secondary capitalize ">
           {aboutContent.sectionHeading}
         </h1>
 
@@ -25,7 +22,7 @@ const AboutUs = () => {
           </div>
 
           <div className="content space-y-8 flex-1 basis-[41rem]">
-            <h3 className="text-[3rem] text-black_primary capitalize">
+            <h3 className="text-[3rem] text-black_primary dark:text-white/80 capitalize">
               {aboutContent.heading}
             </h3>
             <p className="text-2xl text-black_secondary text-balance">
@@ -39,7 +36,7 @@ const AboutUs = () => {
         <div className="box-container grid auto-cols-[16rem] sm:grid-cols-2 gap-8 grid-flow-row md:grid-flow-col">
           {aboutContent?.stats?.map((stat) => (
             <div
-              className="box text-center bg-black_primary py-12 px-8"
+              className="box text-center bg-black_primary dark:bg-black py-12 px-8"
               key={stat.statFor}
             >
               <h3 className="text-[4rem] font-semibold text-white capitalize">

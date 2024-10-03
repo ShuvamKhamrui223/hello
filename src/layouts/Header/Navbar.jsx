@@ -5,12 +5,12 @@ import darkModeIcon from "../../assets/icons/dark_mode.svg";
 import lightModeIcon from "../../assets/icons/light_mode.svg";
 import Button from "../../components/common/Button";
 import { NavLink, useLocation } from "react-router-dom";
+import ThemeBtn from "../../components/common/ThemeBtn";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLightTheme, setIsLightTheme] = useState(false);
   const location = useLocation();
   return (
-    <nav className="w-full flex items-center py-6 px-6 md:px-[5%] lg:px-[7%]">
+    <nav className="w-full bg-none dark:bg-black_primary/90 flex items-center py-6 px-6 md:px-[5%] lg:px-[7%]">
       <div className="container w-full flex items-center justify-between">
         <Logo />
 
@@ -20,7 +20,9 @@ const Navbar = () => {
               <NavLink
                 to={menuitem.path}
                 className={`text-black_primary capitalize ${
-                  location.pathname == menuitem.path ? "font-bold bg-black_primary py-2 px-4 text-white":"font-normal"
+                  location.pathname == menuitem.path
+                    ? "font-bold bg-black_primary py-2 px-4 text-white"
+                    : "font-normal"
                 } text-2xl`}
               >
                 {menuitem.menuLabel}
@@ -29,20 +31,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* <div className="flex gap-6 items-center">
-          <img
-            className="cursor-pointer invert size-8 select-none"
-            src={isLightTheme ? darkModeIcon : lightModeIcon}
-            onClick={() => setIsLightTheme((prev) => !prev)}
-            alt="theme icon"
-          />
+        <div className="flex gap-6 items-center">
+          <ThemeBtn />
           <Button labelText="login" className={"hidden sm:block"} />
           <Button
             labelText="signup"
             className={"hidden sm:block"}
             gradient={true}
           />
-        </div> */}
+        </div>
       </div>
 
       {/* optional rendering */}
@@ -59,7 +56,7 @@ const Navbar = () => {
       <aside
         className={`absolute top-0 right-0 ${
           isMenuOpen ? "flex" : "hidden"
-        } transition-all duration-200  bg-black/90 min-h-screen w-2/3 flex items-center justify-center gap-8 flex-col`}
+        } transition-all duration-200 z-20  bg-black/90 min-h-screen w-2/3 flex items-center justify-center gap-8 flex-col`}
       >
         <a
           className="text-5xl bg-white p-4 text-maincolor cursor-pointer absolute top-0 right-5"

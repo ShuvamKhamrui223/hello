@@ -10,12 +10,12 @@ const Button = ({
         ${icon ? "py-2" : "py-4"} ${
         gradient
           ? "outline-none text-white bg-gradient-to-r from-purple-700 to-pink-500 hover:from-pink-500  hover:to-purple-500"
-          : "text-zinc-700 hover:bg-zinc-700 hover:text-zinc-100"
+          : "text-zinc-700 dark:text-zinc-200 hover:bg-zinc-700 dark:hover:bg-black hover:text-zinc-100"
       } ${className}`}
     >
       <span>{labelText}</span>
       {/* icon will only render when it has been provided as prop */}
-      {icon && <img src={icon} className="invert" />}
+      {icon && <img src={icon} className="invert dark:invert-0" />}
     </button>
   );
 };

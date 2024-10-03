@@ -3,7 +3,7 @@ import Button from "./common/Button";
 const ContactUs = () => {
   return (
     <section className="min-h-[45vh] flex flex-col gap-8" id="contact">
-      <h1 className="text-[3rem] self-start text-black_primary pl-4 border-l-[1rem] border-black_secondary capitalize">
+      <h1 className="text-[3rem] self-start text-black_primary dark:text-white pl-4 border-l-[1rem] border-black_secondary capitalize">
         contact us
       </h1>
 
@@ -12,10 +12,11 @@ const ContactUs = () => {
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58974.16940173616!2d88.3336382!3d22.50847545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1725905193634!5m2!1sen!2sin"
           width="600"
           height="450"
-          style="border:0;"
-          allowfullscreen=""
+          style={{ border: 0 }}
+          className="h-full w-full"
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
 
         <form

@@ -10,7 +10,7 @@ const RootLayout = () => {
   return (
     <>
       <Header />
-      <main className="flex flex-col min-h-screen  px-[4%] py-12 lg:px-[8%]">
+      <main className="flex flex-col min-h-screen dark:bg-black_primary transition-colors duration-200 px-[4%] py-12 lg:px-[8%]">
         <Outlet />
       </main>
       <Footer />
