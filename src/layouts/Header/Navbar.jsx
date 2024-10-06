@@ -19,7 +19,7 @@ const Navbar = () => {
             <li key={menuitem.menuId}>
               <NavLink
                 to={menuitem.path}
-                className={`text-black_primary capitalize ${
+                className={`text-black_primary dark:text-black_secondary capitalize ${
                   location.pathname == menuitem.path
                     ? "font-bold bg-black_primary py-2 px-4 text-white"
                     : "font-normal"
